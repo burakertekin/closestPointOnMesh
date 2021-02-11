@@ -109,7 +109,7 @@ bool Mesh::readObj(const char* filename)
             index_offset += fnum;
         }
     }
-
+    printf("Obj loaded succesfully. Vertex count: %lu. Face count: %lu\n", getVertices().size(), getFaces().size());
     return true;
 
 }
