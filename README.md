@@ -1,9 +1,5 @@
 # closest point on mesh
 
-approach, challenges, tests
-
-assumptions: cmake, obj
-
 ## docs
 Refer to index.html within doc/out/index.html for doxygen documentation
 
