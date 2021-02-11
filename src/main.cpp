@@ -2,8 +2,8 @@
 #define TINYOBJLOADER_IMPLEMENTATION
 
 #include <fstream>
+#include "stdio.h"
 #include "PointQuery.h"
-#include <chrono>
 
 int main(int argc, char** argv)
 {
@@ -31,7 +31,7 @@ int main(int argc, char** argv)
         // read input query pts & distance
         while(input >> x >> y >> z >> querydist)
         {
-            std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+            std::cout << "===============================================" << std::endl;
             dist = querydist;
             Eigen::Vector3d queryPoint(x, y, z);
             Eigen::Vector3d result = query(queryPoint, dist);
@@ -43,8 +43,6 @@ int main(int argc, char** argv)
             {
                 printf("NOT FOUND pt within distance %f to query pt %f %f %f\n", dist, x, y, z);
             }
-            std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-            std::cout << "Time difference = " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << std::endl;
         }
     }
 }

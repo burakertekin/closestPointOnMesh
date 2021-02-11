@@ -1,11 +1,12 @@
 # closest point on mesh
 
-# approach, challenges, tests
+approach, challenges, tests
 
-# assumptions: cmake, obj
+assumptions: cmake, obj
 
-# TODO doxygen docs
+## docs
+Refer to index.html within doc/out/index.html for doxygen documentation
 
-# external packages
-# using eigen3 for linear algebra bcs it has no dependency other than c++ standard library
-# https://github.com/tinyobjloader/tinyobjloader for obj file operations, only c++ std dependency again
+## external packages
+using eigen3 for linear algebra and tinyobjloader for .obj file parsing
+neither of them has no dependency other than c++ standard library

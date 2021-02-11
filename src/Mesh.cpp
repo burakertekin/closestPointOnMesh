@@ -1,4 +1,5 @@
 #include "Mesh.h"
+#include "stdio.h"
 
 /**
  * @brief Add given vertex to vertices vector
@@ -57,7 +58,7 @@ bool Mesh::readObj(const char* filename)
     const char* basepath = NULL;
 
     // load obj file
-    std::cout << "Loading obj file: " << filename << std::endl << std::endl;
+    std::cout << "Loading obj file: " << filename << std::endl;
 
     tinyobj::attrib_t attrib;
     std::vector<tinyobj::shape_t> shapes;
